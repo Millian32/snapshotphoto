@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: yarn install
         run: |
           yarn install
 
@@ -49,6 +49,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'snapshotphoto'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A65F456802CD4966B1D1D9466699A200 }}
           package: .

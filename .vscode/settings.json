@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/12a7e59f-e6f4-45f8-9e7c-ce75b9cc6b8f/resourceGroups/appsvc_linux_centralus_basic/subscriptions/12a7e59f-e6f4-45f8-9e7c-ce75b9cc6b8f/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/snapphototest",
+    "appService.deploySubpath": "build"
+}
