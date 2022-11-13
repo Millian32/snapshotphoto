@@ -51,4 +51,4 @@ jobs:
         with:
           app-name: 'snapshotphoto'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A65F456802CD4966B1D1D9466699A200 }}
-          package: ./build
+          package: .
