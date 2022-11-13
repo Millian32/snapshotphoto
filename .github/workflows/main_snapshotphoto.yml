@@ -21,15 +21,16 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: yarn install
+      - name: yarn install, build
         run: |
           yarn install
+          yarn run build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./build
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,4 +51,4 @@ jobs:
         with:
           app-name: 'snapshotphoto'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A65F456802CD4966B1D1D9466699A200 }}
-          package: .
+          package: ./build
